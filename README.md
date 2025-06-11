@@ -1,13 +1,9 @@
 ## 📁 Estructura del Repositorio
 
 /LoginsAPI/
-
 ├── README.md
-
 ├── /sql/
-
 │   ├── Consulta1.sql
-
 │   ├── Consulta2.sql
 
 │   └── Consulta3.sql 
