@@ -2,22 +2,36 @@
 
 /LoginsAPI/
 ├── README.md
+
 ├── /sql/
+
 │   ├── Consulta1.sql
+
 │   ├── Consulta2.sql
 
 │   └── Consulta3.sql 
 
+
 ├── /csv/
+
 │   ├── ccUsers.csv
+
 │   ├── ccloglogin.csv
+
 │   └── ccRIACat_Areas.csv
+
 ├── /images/
+
 │   └── postman_csv_example.png
+
 ├── /LoginsAPI/
+
 │   ├── Controllers/
+
 │   ├── Models/
+
 │   ├── Program.cs
+
 │   └── LoginsAPI.csproj
 
 
