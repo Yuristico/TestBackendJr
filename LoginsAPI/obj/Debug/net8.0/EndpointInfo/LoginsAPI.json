@@ -1,0 +1,422 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "LoginsAPI",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Csv/export/csv": {
+      "get": {
+        "tags": [
+          "Csv"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Csv/upload": {
+      "post": {
+        "tags": [
+          "Csv"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "File",
+                  "TargetTable"
+                ],
+                "type": "object",
+                "properties": {
+                  "File": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "TargetTable": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "File": {
+                  "style": "form"
+                },
+                "TargetTable": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Logins": {
+      "get": {
+        "tags": [
+          "Logins"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Login"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Login"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Login"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Logins"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "Extension",
+                  "Fecha",
+                  "TipoMov",
+                  "User_id"
+                ],
+                "type": "object",
+                "properties": {
+                  "User_id": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Extension": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "TipoMov": {
+                    "type": "boolean"
+                  },
+                  "Fecha": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                }
+              },
+              "encoding": {
+                "User_id": {
+                  "style": "form"
+                },
+                "Extension": {
+                  "style": "form"
+                },
+                "TipoMov": {
+                  "style": "form"
+                },
+                "Fecha": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Login"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Login"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Login"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Logins/{id}": {
+      "get": {
+        "tags": [
+          "Logins"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Login"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Login"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Login"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Logins"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Extension": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Fecha": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                }
+              },
+              "encoding": {
+                "Extension": {
+                  "style": "form"
+                },
+                "Fecha": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Logins"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Area": {
+        "required": [
+          "areaName",
+          "createDate"
+        ],
+        "type": "object",
+        "properties": {
+          "idArea": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "areaName": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string"
+          },
+          "statusArea": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarios": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Usuario"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Login": {
+        "type": "object",
+        "properties": {
+          "log_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "user_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "usuarioRef": {
+            "$ref": "#/components/schemas/Usuario"
+          },
+          "extension": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tipoMov": {
+            "type": "boolean"
+          },
+          "fecha": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Usuario": {
+        "required": [
+          "apellidoPaterno",
+          "fCreate",
+          "login",
+          "nombres",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "login": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string"
+          },
+          "nombres": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          },
+          "apellidoPaterno": {
+            "maxLength": 30,
+            "minLength": 1,
+            "type": "string"
+          },
+          "apellidoMaterno": {
+            "maxLength": 30,
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "maxLength": 64,
+            "minLength": 1,
+            "type": "string"
+          },
+          "tipoUser_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fCreate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastLoginAttempt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "idArea": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "area": {
+            "$ref": "#/components/schemas/Area"
+          },
+          "logins": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Login"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
