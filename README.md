@@ -5,34 +5,34 @@
 
 ├── /sql/
 
-│   ├── Consulta1.sql
+│---├── Consulta1.sql
 
-│   ├── Consulta2.sql
+│---├── Consulta2.sql
 
-│   └── Consulta3.sql 
+│---└── Consulta3.sql 
 
 
 ├── /csv/
 
-│   ├── ccUsers.csv
+│---├── ccUsers.csv
 
-│   ├── ccloglogin.csv
+│---├── ccloglogin.csv
 
-│   └── ccRIACat_Areas.csv
+│---└── ccRIACat_Areas.csv
 
 ├── /images/
 
-│   └── postman_csv_example.png
+│---└── postman_csv_example.png
 
 ├── /LoginsAPI/
 
-│   ├── Controllers/
+│---├── Controllers/
 
-│   ├── Models/
+│---├── Models/
 
-│   ├── Program.cs
+│---├── Program.cs
 
-│   └── LoginsAPI.csproj
+│---└── LoginsAPI.csproj
 
 
 ## ✅ Requisitos
