@@ -1,11 +1,17 @@
 ## 📁 Estructura del Repositorio
 
 /LoginsAPI/
+
 ├── README.md
+
 ├── /sql/
-│   ├── Consulta1.sql 
+
+│   ├── Consulta1.sql
+
 │   ├── Consulta2.sql
+
 │   └── Consulta3.sql 
+
 ├── /csv/
 │   ├── ccUsers.csv
 │   ├── ccloglogin.csv
@@ -158,7 +164,7 @@ o el anterior de ese usuario respectivamente, sólo si ese otro registro existe.
 Si tienes una imagen de ejemplo en el repositorio, puedes incluirla así:
 
 
-![Vista del CSV en Postman](images/postman_csv_example.png)
+![Vista del CSV en Postman](Images/postman_csv_example.png)
 
 ## 🗄️ Consultas solicitadas
 Las consultas solicitadas se encuentran en la carpeta sql en donde hay 3 querys con lo siguiente:
